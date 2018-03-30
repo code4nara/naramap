@@ -1,0 +1,259 @@
+
+/* H1-H4 */
+h1, h2, h3, h4{
+    margin: 0px;padding: 0px;border: 0px;  text-align:center;
+}
+h1{
+    font-size:2em;font-weight: 600;
+}
+h2{
+    font-size:1.5em;font-weight: 600;
+}
+h3{
+    font-size:1.2em;font-weight: 600;
+}
+h4{
+    font-size:1em;font-weight: 600;
+}
+
+/* P */
+p{
+    color:#000;
+    line-height:1em;
+    margin:0; padding:0;
+}
+p.center{
+    text-align: center;
+}
+p.leftsmall{
+    text-align: left;font-size:10pt;
+}
+p.centersmall{
+    text-align: center;font-size:10pt;
+}
+p.rigttsmall{
+    text-align: right;font-size:10pt;
+}
+p.leftsmallitalic{
+    font-style:italic;text-align:left;font-size:10pt;
+}
+p.centersmallitalic{
+    font-style:italic;text-align:center;font-size:10pt;
+}
+p.rightsmallitalic{
+    font-style:italic;text-align:right;font-size:10pt;
+}
+p.oinfo{ line-height:1em; background-color:rgba(0, 0, 0, 0.25); text-align:center; font-weight:bold }
+    
+
+/* hr */
+hr{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+hr.full{
+    margin: 0;
+    width:100%; size:3px;
+    border-style:solid;
+    color: #0000cc;
+}
+hr.mid{
+    margin-left: 10%; margin-right:10%;
+    width:80%; size:2px;
+    border-style:solid;
+    color: #0000cc;
+}
+hr.small{
+    margin-left: 10%;margin-right: 10%;
+    width:60%; size:2px;
+    border-style:solid;
+    color: #0000cc;
+}
+
+/*
+table{ margin-left:auto; margin-right:auto; border: 1px #000 solid; }
+caption{ margin-left:auto; margin-right:auto; padding: 0px;}
+table, td, th{ border: 1px #000 solid;} 
+*/
+
+/* class pos */
+div.ctbl{
+    border: 1px #000 outset;
+    margin-left:auto; margin-right:auto; padding: 0px;
+    text-align:center;
+    width: 250px; 
+    height: 200px;
+}
+div.indicator{
+    margin-left:auto; margin-right:auto;
+    border: 6px #880 outset;
+    text-align:center;
+    width: 240px; height: 20px; 
+}
+table.pos{
+    width: 250px; 
+    height: 200px;
+}
+
+/* For Leaflet Map */
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map {
+    z-index: 0;
+    height: 100%;
+}
+
+/*
+table#info{  border: 1px #000 solid; color:#f00; font-weight:medium; background-color:rgba(255, 255, 255, 0.4);}
+
+td{ margin:0; padding:0 5 0 5; }
+td#info{ color:#444; text-align:center;}
+*/
+
+DIV.cinfo120 img{
+    text-align: center;
+    margin:0; pading:0;
+    width:  120px;
+    height: 80px;
+}
+
+DIV.cinfo180 img{
+    text-align: center;
+    margin:0; pading:0;
+    width:  180px;
+    height: 120px;
+}
+
+DIV.wcicon img{
+    float:  none;
+    width:  30px;
+    height: 30px;
+}
+
+DIV.tag60 img{
+    float:  right;
+    width:  60px;
+    height: 20px;
+}
+
+DIV.tag75 img{
+    float:  right;
+    width:  75px;
+    height: 25px;
+}
+
+DIV.info120 img{
+    float:  right;
+    width:  120px;
+    height: 80px;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* popup */
+.popup-title {
+    padding-bottom: 0.05em;
+    margin-bottom: 0.3em;
+    border-bottom: solid 1px #796bae ;     
+    font-size:1.3em;
+    font-weight: bold;
+    color: #796bae;
+}
+
+.popup-photo {
+    text-align: center;
+}
+
+.leaflet-popup-content p {
+    margin: 0; /* リセット */
+}
+
+.popup-btn { 
+    padding: 0.5em 1em;
+    margin-top: 0.8em;
+    border-radius: 4px;
+    background-color: #796bae ;
+    font-size:1em;    
+    color: #fff;
+    border: none; /* リセット */
+}
+
+.popup-barrier {
+    position: relative;
+    line-height: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #ccc;
+    text-indent:1em;
+}
+
+.popup-barrier::before {
+  content: url(icon/icon_wheelchair.png);
+  display: inline-block;
+  position:absolute;
+  top:0; 
+  left:0;
+  width:12px;
+  height:14px;
+  margin-left: -14px;
+}
+
+.popup-note {
+    line-height: 1.2em;
+    padding-top: 8px;
+}
+
+table.popup-item {
+    border-collapse: collapse;
+    width: 265px;
+    word-break:break-all;
+} 
+
+.popup-item th, 
+.popup-item td {
+    vertical-align: top;
+}
+
+.popup-item th{
+    width: 80px;
+    font-weight: normal;
+}
+
+.popup-photo_shisetu {
+    float: right;
+    margin-left:5px;
+    margin-bottom:5px;
+}
+
+.popup-photo_shisetu img {
+    width:  120px;
+    height: 80px;
+}
+
+/* 追加 2017.12.30 */
+
+.wcicon {
+    float: left;
+}
+
+.wc360 {
+    float: right;
+    border: solid 1px #796bae;
+    padding: 0.2em 0.3em;
+    border-radius: 4px;
+    font-size:1em;    
+}
+
+.wc360 a {
+    color: #796bae;
+    text-decoration: none;
+}
+
