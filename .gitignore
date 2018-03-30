@@ -1,0 +1,11 @@
+# .htaccess , .htpasswd , .htdigest etc.
+.ht*
+
+# license
+js/license.js
+
+# log files
+log/*
+
+# AutoSavings by Emacs
+\#*#

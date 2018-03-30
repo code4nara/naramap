@@ -1,0 +1,977 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "きてみてならＳＨＯＰ",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｎ",
+        "ostomate": "y",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829222,
+          34.684787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "興福寺国宝館",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.832451,
+          34.683533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "興福寺南側",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "手すりが動かせない",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831591,
+          34.682244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "奈良県庁主棟Ｂ１",
+        "Attitude": "",
+        "Floor": "B1",
+        "babyseat": "ｙ",
+        "ostomate": "ｙ",
+        "nursingbed": "n",
+        "washlet": "ｙ",
+        "rotation": "ｙ",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.832602,
+          34.685208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "奈良県庁東棟１階",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "ｙ",
+        "nursingbed": "y",
+        "washlet": "ｙ",
+        "rotation": "ｙ",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "http://unimap.org/photo/map6gh3w/kenchou2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.833659,
+          34.684882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "大仏前観光自動車駐車場",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "ｙ",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839404,
+          34.685106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "東大寺総合文化センターＢ１",
+        "Attitude": "",
+        "Floor": "B1",
+        "babyseat": "ｙ",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "ｙ",
+        "rotation": "ｙ",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "http://unimap.org/photo/map6gh3w/todaiji2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839206,
+          34.685913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "narapark",
+        "Name": "大仏殿入道口西側",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "ｙ",
+        "emergencycall": "y",
+        "Summery": "男女別トイレ内",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838565,
+          34.687792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "takabatake",
+        "Name": "入江泰吉記念奈良市写真美術館　",
+        "Attitude": "",
+        "Floor": "B1",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8455905,
+          34.67566299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "takabatake",
+        "Name": "荒池園地トイレ　　",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8368626,
+          34.680628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "takabatake",
+        "Name": "奈良ホテル",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "y",
+        "ostomate": "y",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8334804,
+          34.67989804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "takabatake",
+        "Name": "なら和み館",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8341053,
+          34.67815773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "喜光寺",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "手すりが動かせない",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "唐招提寺",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "西ノ京みやげ処きとら",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "y",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "ローソン",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "玄奘三蔵院伽藍",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "お写経道場",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "車いす転回不可",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "nishinokyo",
+        "Name": "白鳳伽藍",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "亀石【セブンイレブン】",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y ",
+        "emergencycall": "n",
+        "Summery": "手すりが動かせない",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "橘寺",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "ｎ",
+        "nursingbed": "ｎ",
+        "washlet": "ｎ",
+        "rotation": "ｙ",
+        "emergencycall": "y",
+        "Summery": "手すりが動かせない",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "明日香夢の旬菜館",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "石舞台古墳",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "ｎ",
+        "nursingbed": "ｎ",
+        "washlet": "ｎ",
+        "rotation": "ｎ",
+        "emergencycall": "ｙ",
+        "Summery": "車いす転回不可",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "万葉文化館",
+        "Attitude": "",
+        "Floor": "管理棟1、展示棟B１",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "男女別トイレ内・展示棟には尿器洗浄、オストメイト設備あり",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "万葉文化館駐車場",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "ｎ",
+        "ostomate": "y",
+        "nursingbed": "y",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "ｙ",
+        "Summery": "尿器洗浄あり",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "アスカム",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "asuka",
+        "Name": "豊浦休憩所",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "ｎ",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "kitamachi",
+        "Name": "奈良市きたまち転害門観光案内所",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｙ",
+        "ostomate": "ｎ",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "kitamachi",
+        "Name": "セブンイレブン",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "ｎ",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "kitamachi",
+        "Name": "奈良公園事務所",
+        "Attitude": "",
+        "Floor": "1",
+        "babyseat": "y",
+        "ostomate": "y",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "naramachi",
+        "Name": "ならまちセンター　",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "n",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8312783,
+          34.6799267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "naramachi",
+        "Name": "なら工藝館",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          34.67870475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "naramachi",
+        "Name": "元興寺",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8315626,
+          34.67745188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "naramachi",
+        "Name": "奈良町からくりおもちゃ館",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "y",
+        "emergencycall": "y",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8280998,
+          34.6773063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "naramachi",
+        "Name": "ならまち格子の家",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "n",
+        "rotation": "y",
+        "emergencycall": "n",
+        "Summery": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8307043,
+          34.67500345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Area": "naramachi",
+        "Name": "鹿の舟",
+        "Attitude": "",
+        "Floor": "",
+        "babyseat": "y",
+        "ostomate": "n",
+        "nursingbed": "n",
+        "washlet": "y",
+        "rotation": "n",
+        "emergencycall": "n",
+        "Summery": "車いす転回不可",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8306399,
+          34.67390053
+        ]
+      }
+    }
+  ]
+}
