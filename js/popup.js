@@ -23,15 +23,25 @@ TemplatePopup_Toilet = '<div class="leaflet-popup-content" style="width: 266px;"
 
 
 //  地点情報用ポップアップテンプレート（注意／警告／バス停／スタート／ゴール）
-TemplatePopup_Info = '<div class="leaflet-popup-content" style="width: 266px;">'
-                + 'INFO_NAME'              //  地点名称
-                + 'INFO_ITEM_BLOCK'  　　  //  
-                + 'INFO_ROUTE_SEARCH'      //  ルート検索ボタン
-                + "</div>\n";
+TemplatePopup_POI = '<div class="leaflet-popup-content" style="width: 266px;">'
+                   + 'POI_NAME'              //  地点名称
+                   + 'POI_SUMMERY'           //  地点説明（TemplateParts_Summry）
+                   + 'POI_PHOTO1'            //  地点画像１（TemplateParts_PhotoL ）
+                   + 'POI_ITEMS'          //  詳細情報テーブル(TemplatePopup_ITEMS)
+                   + 'POI_DESCRIBE'　　　　  //  詳細説明（Remarks用予備）　　　
+                   + 'POI_ROUTE_SEARCH'      //  ルート検索ボタン
+                   + "</div>\n";
 
 //  詳細情報テーブル
-TemplatePopup_ITEMS = '<table class="popup-item">POI_ITEMS</table>\n';     
-TemplateItems_Parts = '<tr><th>ITEM_KEY</th><td>ITEM_VALUE</td></tr>';
+TemplatePopup_ITEMS = '<table class="popup-item">'
+                    + 'POI_OPENINGTIME'    //  営業時間
+                    + 'POI_HOLIDAY'        //  休日
+                    + 'POI_PRICE'          //  価格
+                    + 'POI_ADDRESS'        //  住所
+                    + 'POI_TEL'     　     //  電話番号
+                    + 'POI_FAX'     　     //  FAX番号
+                    + 'POI_LINK'     　    //  リンク
+                    + "</table>\n";     
 
 ////
 //  テンプレート部品
@@ -59,8 +69,8 @@ TemplateParts_Discount = '<br>障害者手帳割引：POPUP_DISCOUNT';
 
 TemplateItem_OpeningTime = '<tr><th>営業時間：</th><td>POPUP_OPEN～POPUP_CLOSE</td></tr>';
 TemplateItem_Holiday  = '<tr><th>定休日：</th><td>POPUP_HOLIDAY</td></tr>';
-TemplateItem_Price    = '<tr><th>入場費用：</th><td>POPUP_PRICE POPUP_DISCOUNT</td></tr>';
-TemplateItem_FAX      = '<tr><th>ＦＡＸ：</th><td>POPUP_FAX</td></tr>';
+TemplateItem_Price    = '<tr><th>入場費用：</th><td>POPUP_PRICE</td></tr>';
+TemplateItem_Address  = '<tr><th>所在地：</th><td>POPUP_ADDRESS</td></tr>';
 TemplateItem_FAX      = '<tr><th>ＦＡＸ：</th><td>POPUP_FAX</td></tr>';
 TemplateItem_TEL      = '<tr><th>電話番号：</th><td>POPUP_TEL</td></tr>';
 TemplateItem_FAX      = '<tr><th>ＦＡＸ：</th><td>POPUP_FAX</td></tr>';
@@ -79,9 +89,9 @@ TemplateParts_WC_Icon  = '<img src="POPUP_WC_ICON">';
 TemplateParts_360Photo = '<div class="wc360"><a href="POPUP_360PHOTO" target="_blank">360°写真</a></div>';
 
 //  ルート検索
-TemplateParts_RouteSearch = '<form name="routeSearch"><input class="popup-btn" type="button" name="route" value="ここに行く" onclick="SearchWheelChairRoute( SEARCH_GEOMETRY_POINT )"></form>'
+TemplateParts_RouteSearch = '<form name="routeSearch"><input class="popup-btn" type="button" name="route" value="ここに行く" onclick="SearchWheelChairRoute( SEARCH_GEOMETRY_POINT )">'
 
-TemplateParts_WCRouteSearch = '<form name="routeSearch"><input class="popup-btn" type="button" name="route" value="車椅子でここに行く" onclick="SearchWheelChairRoute( SEARCH_GEOMETRY_POINT )"></form>'
+TemplateParts_WCRouteSearch = '&nbsp;&nbsp;<input class="popup-btn" type="button" name="route" value="車椅子でここに行く" onclick="SearchWheelChairRoute( SEARCH_GEOMETRY_POINT )"></form>'
 
 ////////
 //  ポップアップ制御関数
@@ -178,82 +188,38 @@ function setPopupContentWC(feature){
   return( popupContent );
 } 
 ////
-//  Popup for POI (except WC/Info)
+//  Popup for POI (except WC)
 function onEachFeaturePOI(feature, layer) {
-  popupContent = setPopupContentInfo(feature);
-  console.log( "popupContent: "+popupContent );
+  popupContent = setPopupContentPOI(feature, layer);
+//  console.log( "popupContent: "+popupContent );
 
 //    window.alert (popupContent);
   layer.bindPopup(popupContent);
 }
 
 //  PopupContent for the Information 
-function setPopupContentInfo(feature) {
-//  console.log( "setPopupContentInfo()" );
-  var popupContent=TemplatePopup_Info ;
+function setPopupContentPOI(feature, layer) {
+//  console.log( "setPopupContentPOI()" );
+  var popupContent=TemplatePopup_POI ;
   var popupParts = "" ;
-  var popupBlock = "" ;
 
+  //  Place Name
   if ( feature.properties ){
+	  //  Name
 	  if (( feature.properties.名称 !== undefined )&&( feature.properties.名称 != "" )){
-              	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.名称 );
+	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.名称 );
     }else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
     }
-    popupContent = popupContent.replace("INFO_NAME", popupParts );
+    popupContent = popupContent.replace("POI_NAME", popupParts );
 
-    Object.keys( feature.properties ).forEach(function(key) {
-      var value = this[key];
-      switch( key ){
-        case "名称" :
-        case "名称_カナ" :
-        case "NO" :
-        case "﻿都道府県コード又は市区町村コード" :
-        case "都道府県名" :
-          break;
-        default:
-          if ( value !== "" ){
-            //  console.log([key, ':', value].join(' '));
-	          popupParts = TemplateItems_Parts.replace( "ITEM_KEY" , key );
-	          popupParts = popupParts.replace( "ITEM_VALUE" , value );
-            popupBlock += popupParts;
-          }
-      }
-    }, feature.properties );
-
-    console.log( "block : " + popupBlock );
-    console.log( "----" );
-    console.log( "temp : " + TemplatePopup_ITEMS );
-
-    popupParts = TemplatePopup_ITEMS.replace( "POI_ITEMS", popupBlock );
-    popupContent = popupContent.replace("INFO_ITEM_BLOCK", popupParts );
-
-    //  RouteSearch
-    popupParts  = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    popupParts += TemplateParts_WCRouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    popupContent = popupContent.replace("INFO_ROUTE_SEARCH", popupParts );
-  }
-
-  return( popupContent );
-}
-
-/*
-      if ( value !== "" ){
-	      popupParts = TemplateItems_Parts.replace( "ITEM_KEY" , key );
-	      popupParts = popupParts.replace( "ITEM_VALUE" , value );
-        popupBlock += popupParts;
-      }
-    popupContent = popupBlock ;
-*/
-/*
-	  //  Name
 	  //  Summery
 	  if (( feature.properties.Summery !== undefined )&&( feature.properties.Summery != "" )){
 	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
     }else{
 	    popupParts = "";
     }
-    popupContent = popupContent.replace("INFO_SUMMERY", popupParts );
+    popupContent = popupContent.replace("POI_SUMMERY", popupParts );
 
     //  Photo Image (1)
 	  if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
@@ -261,14 +227,78 @@ function setPopupContentInfo(feature) {
 	  }else{
       popupParts = "";
 	  }
-    popupContent = popupContent.replace("INFO_PHOTO1", popupParts );
+    popupContent = popupContent.replace("POI_PHOTO1", popupParts );
     //  Photo Image (2)
 	  if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
       popupParts = TemplateParts_Photo.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	  }else{
       popupParts = "";
     }
-    popupContent = popupContent.replace("INFO_PHOTO2", popupParts );
+    popupContent = popupContent.replace("POI_PHOTO2", popupParts );
+
+	  //  Item Table
+    popupBlock = TemplatePopup_ITEMS;
+    {
+      // Opening times
+      if ( (feature.properties.Open !== undefined ) && (feature.properties.Close !== undefined ) ){    		
+	      popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPEN" , feature.properties.Open  );
+	      popupParts = popupParts.replace( "POPUP_CLOSE" , feature.properties.Close );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_OPENINGTIME", popupParts );
+
+      // Holiday
+      if ( feature.properties.Holiday !== undefined ){
+	      popupParts = TemplateItem_Holiday.replace( "POPUP_HOLIDAY" , feature.properties.Holiday  );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_HOLIDAY", popupParts );
+
+      // Price fee
+      if ( feature.properties.Price !== undefined ) {
+	      popupParts = TemplateItem_Price.replace( "POPUP_PRICE" , feature.properties.Price );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_PRICE", popupParts );
+
+      // 住所／所在地
+      if ( feature.properties.住所 !== undefined ) {
+	      popupParts = TemplateItem_Address.replace( "POPUP_ADDRESS" , feature.properties.住所  );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_ADDRESS", popupParts );
+
+      // TEL
+      if ( feature.properties.電話番号 !== undefined ) {
+	      popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.電話番号  );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_TEL", popupParts );
+
+      // FAX
+      if ( feature.properties.FAX !== undefined ) {
+	      popupParts = TemplateItem_FAX.replace( "POPUP_FAX" , feature.properties.FAX  );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_FAX", popupParts );
+
+      // LINK
+      if ( feature.properties.URL !== undefined ) {
+	      popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
+	      popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
+	      popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts  );
+      }else{
+	      popup = "";
+      }
+      popupBlock = popupBlock.replace("POI_LINK", popupParts );
+    }
+    popupContent = popupContent.replace("POI_ITEMS", popupBlock );
 
 	  //  Remarks
 	  if (( feature.properties.Remarks !== undefined )&&( feature.properties.Remarks != "" )){
@@ -276,17 +306,15 @@ function setPopupContentInfo(feature) {
     }else{
 	    popupParts = "";
     }
-    popupContent = popupContent.replace("INFO_DESCRIBE", popupParts );
+    popupContent = popupContent.replace("POI_DESCRIBE", popupParts );
 
     //  RouteSearch
     popupParts  = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
     popupParts += TemplateParts_WCRouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    popupContent = popupContent.replace("INFO_ROUTE_SEARCH", popupParts );
+    popupContent = popupContent.replace("POI_ROUTE_SEARCH", popupParts );
 	}
 
-  console.log( "kokoInfo : "+ popupContent );
+//  console.log( "kokoInfo : "+ popupContent );
   return( popupContent );
 }
-*/
-
 

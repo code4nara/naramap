@@ -20,13 +20,6 @@ var facilityLayer = new L.GeoJSON.AJAX( GEOJSON_FACILITY , {
       case '飲食店営業' : return L.marker(latlng, {icon: IconRestaurant, opacity: "0.8"});
       case '宿泊施設'   : return L.marker(latlng, {icon: IconLodging,    opacity: "0.8"});
       case 'サービス業' : return L.marker(latlng, {icon: IconService,    opacity: "0.8"});
-      case '福祉施設'   : return L.marker(latlng, {icon: IconWelfare,    opacity: "0.8"});
-      case '社会教育施設・文化施設' : return L.marker(latlng, {icon: IconCulture,    opacity: "0.8"});
-      case '公衆浴場'   : return L.marker(latlng, {icon: IconPublicbath,    opacity: "0.8"});
-      case '食品販売店' : return L.marker(latlng, {icon: IconFoods,      opacity: "0.8"});
-      case '事務所・会社' : return L.marker(latlng, {icon: IconOffice,   opacity: "0.8"});
-      case '理容店' : return L.marker(latlng, {icon: IconBarbershop,     opacity: "0.8"});
-      case '美容店' : return L.marker(latlng, {icon: IconHairdressers,   opacity: "0.8"});
       default : return L.marker(latlng, {icon: IconDefault, opacity: "0.8"});
 	  }
   },

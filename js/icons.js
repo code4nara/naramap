@@ -1,10 +1,10 @@
 //　アイコン設定
 
 //  アイコン格納場所（URI）
-DEF_ICON_URI = './icon/';
+DEF_ICON_URI = 'image/';
 
 //  画像格納場所（URI）
-DEF_IMAGE_URI = './image/';
+DEF_IMAGE_URI = 'image/';
 
 //  多目的トイレアイコン
 var IconToilet   = L.icon({ iconUrl: DEF_ICON_URI+'icon_toilet.png',
@@ -18,14 +18,14 @@ var IconBusstop  = L.icon({ iconUrl: DEF_ICON_URI+'icon_busstop.png',
                             iconSize: [22,34], iconAnchor: [11,34], popupAnchor: [0,-30] });
 
 //  薬局
-var IconPharmacy = L.icon({ iconUrl: DEF_ICON_URI+'pharmacy.png',
+var IconPharmacy = L.icon({ iconUrl: DEF_ICON_URI+'icon_pharmacy.png',
                             iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-10] });
 //  facility
-var IconRestaurant = L.icon({ iconUrl: DEF_ICON_URI+'restaurant.png',
+var IconRestaurant = L.icon({ iconUrl: DEF_ICON_URI+'icon_restaurant.png',
                             iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-10] });
-var IconLodging    = L.icon({ iconUrl: DEF_ICON_URI+'lodging.png',
+var IconLodging    = L.icon({ iconUrl: DEF_ICON_URI+'icon_lodging.png',
                             iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-10] });
-var IconService    = L.icon({ iconUrl: DEF_ICON_URI+'service.png',
+var IconService    = L.icon({ iconUrl: DEF_ICON_URI+'icon_service.png',
                             iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-10] });
 
 var IconWelfare    = L.icon({ iconUrl: DEF_ICON_URI+'icon_welfare.png',
