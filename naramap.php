@@ -41,6 +41,7 @@ if( strcmp( $area, "none") ){
 }
 
 print <<< EOF
+  <script type="text/javascript" src="js/license.js"></script>
   <script type="text/javascript" src="js/style.js"></script>
   <script type="text/javascript" src="js/icons.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
