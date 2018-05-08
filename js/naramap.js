@@ -2,7 +2,7 @@
 //  奈良マップ
 //
 
-var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ osmorg ]});
+var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ mierune_std ]});
 
 
 //  多目的トイレ表示
@@ -17,9 +17,16 @@ var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
 var facilityLayer = new L.GeoJSON.AJAX( GEOJSON_FACILITY , {
   pointToLayer: function (feature, latlng) {
     switch ( feature.properties.業種 ){
-      case '飲食店営業' : return L.marker(latlng, {icon: IconRestaurant, opacity: "0.8"});
-      case '宿泊施設'   : return L.marker(latlng, {icon: IconLodging,    opacity: "0.8"});
-      case 'サービス業' : return L.marker(latlng, {icon: IconService,    opacity: "0.8"});
+      case '飲食店営業' : return L.marker(latlng, {icon: IconRestaurant,  opacity: "0.8"});
+      case '宿泊施設'   : return L.marker(latlng, {icon: IconLodging,     opacity: "0.8"});
+      case 'サービス業' : return L.marker(latlng, {icon: IconService,     opacity: "0.8"});
+      case '福祉施設'   : return L.marker(latlng, {icon: IconWelfare,     opacity: "0.8"});
+      case '社会教育施設・文化施設': return L.marker(latlng, {icon: IconCulture,  opacity: "0.8"});
+      case '公衆浴場'   : return L.marker(latlng, {icon: IconPablicbath,  opacity: "0.8"});
+      case '事務所・会社': return L.marker(latlng, {icon: IconOffice,     opacity: "0.8"});
+      case '食品販売店' : return L.marker(latlng, {icon: IconFoods,       opacity: "0.8"});
+      case '理容店'     : return L.marker(latlng, {icon: IconBarberShop  ,opacity: "0.8"});
+      case '美容店'     : return L.marker(latlng, {icon: IconHairDressers,opacity: "0.8"});
       default : return L.marker(latlng, {icon: IconDefault, opacity: "0.8"});
 	  }
   },
@@ -37,7 +44,7 @@ var pharmacyLayer = new L.GeoJSON.AJAX( GEOJSON_PHARMACY , {
 var overlayMaps = {
   "禁煙施設"       : facilityLayer,
   "禁煙薬局"       : pharmacyLayer,
-  "多目的トイレ"   : toiletLayer,
+//  "多目的トイレ"   : toiletLayer,
 //  "ルート案内表示" : routeLayer,
 };
 /*

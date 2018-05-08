@@ -72,13 +72,13 @@ var mierune_std = new L.tileLayer(mierune_url, {
 var baseMaps = {
     "OpenStreetMap": osmorg,
     "MIERUNE標準" 　: mierune_std,
-    "日本版ＯＳＭ" : osmjp,
+//    "日本版ＯＳＭ" : osmjp,
     "地理院標準"   : GSIstd,
-    "地理院淡色地図" : GSIpale,
-    "地理院傾斜地図" : GSIhillshademap,
-    "地理院航空写真" : GSIort,
+//    "地理院淡色地図" : GSIpale,
+//    "地理院傾斜地図" : GSIhillshademap,
+//    "地理院航空写真" : GSIort,
     "MIERUNEモノ" 　: mierune_mono,
-    "MIERUNEカラー" : mierune_color,
+//    "MIERUNEカラー" : mierune_color,
 };
 
 

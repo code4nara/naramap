@@ -1,7 +1,7 @@
 //　アイコン設定
 
 //  アイコン格納場所（URI）
-DEF_ICON_URI = 'image/';
+DEF_ICON_URI = 'icons/';
 
 //  画像格納場所（URI）
 DEF_IMAGE_URI = 'image/';
