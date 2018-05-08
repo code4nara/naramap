@@ -43,9 +43,6 @@ var GSIort =L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/
     attribution: "地理院地図(オルソ)"
 });
 
-////  MIERUNE tile map
-var apikey = "227f7c3288ea7ee88fe0528a1658d975e44cea53f08d2a23d135311d705aeb90293b82f54738cc96dead767074c00a6c5e75095fd0bf518f4c642078ad99fbd9abe079c23b"
-
 // MIERUNE地図mono
 var style = "mierune_mono";
 var mierune_url = "https://tile.mierune.co.jp/" + style + "/{z}/{x}/{y}.png" ;
