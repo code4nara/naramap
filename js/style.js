@@ -3,12 +3,6 @@
 //      タイル地図情報、LineString, Polygon表示形状の定義
 //      Wirtten by Y.ISHIZUKA(Code for Nara)
 ////////////////////////////////////////////////////////////////////////////
-//  背景地図：初期表示の中心の緯度・経度
-DEF_LAT=34.6850; 
-DEF_LON=135.8300; 
-
-//  背景地図：初期表示のズームレベル（縮尺）
-DEF_ZOOM=15;
 
 ////
 //  背景地図情報
@@ -47,14 +41,14 @@ var GSIort =L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/
 var style = "mierune_mono";
 var mierune_url = "https://tile.mierune.co.jp/" + style + "/{z}/{x}/{y}.png" ;
 var mierune_mono = new L.tileLayer(mierune_url, {
-    attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
+    attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors"
 });
 
 // MIERUNE地図color
 var style = "mierune";
 var mierune_url = "https://tile.mierune.co.jp/" + style + "/{z}/{x}/{y}.png" ;
 var mierune_color = new L.tileLayer(mierune_url, {
-    attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
+    attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors"
 });
 
 // MIERUNE地図normal
@@ -62,8 +56,9 @@ var style = "normal";
 var mierune_url = "https://tile.cdn.mierune.co.jp/styles/" + style + "/{z}/{x}/{y}.png" + "?key=" + apikey;
 //var mierune_url = "https://tile.mierune.co.jp/" + style + "/{z}/{x}/{y}.png"  + "?key=" + apikey;
 var mierune_std = new L.tileLayer(mierune_url, {
-    attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
+  attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors"
 });
+
 
 //  Base TileMap List
 var baseMaps = {

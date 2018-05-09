@@ -1,17 +1,27 @@
 //
 //  奈良マップ
 //
-
-var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ mierune_std ]});
+switch( location.host ){
+  case 'naamap.code4nara.org' :
+    //  本番サーバではMierune地図を利用
+    var $maptile = mierune_std;
+    break;
+  default :
+    //  テストサーバではOSM地図を利用
+    var $maptile = osmorg; break;
+}
+var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
 
 
 //  多目的トイレ表示
+/*
 var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
   pointToLayer: function (feature, latlng) {
 	  return L.marker(latlng, {icon: IconToilet, opacity: "0.8"});
   },
   onEachFeature: onEachFeatureWC
 });
+*/
 
 //  禁煙施設
 var facilityLayer = new L.GeoJSON.AJAX( GEOJSON_FACILITY , {
@@ -22,11 +32,11 @@ var facilityLayer = new L.GeoJSON.AJAX( GEOJSON_FACILITY , {
       case 'サービス業' : return L.marker(latlng, {icon: IconService,     opacity: "0.8"});
       case '福祉施設'   : return L.marker(latlng, {icon: IconWelfare,     opacity: "0.8"});
       case '社会教育施設・文化施設': return L.marker(latlng, {icon: IconCulture,  opacity: "0.8"});
-      case '公衆浴場'   : return L.marker(latlng, {icon: IconPablicbath,  opacity: "0.8"});
+      case '公衆浴場'   : return L.marker(latlng, {icon: IconPublicbath,  opacity: "0.8"});
       case '事務所・会社': return L.marker(latlng, {icon: IconOffice,     opacity: "0.8"});
       case '食品販売店' : return L.marker(latlng, {icon: IconFoods,       opacity: "0.8"});
-      case '理容店'     : return L.marker(latlng, {icon: IconBarberShop  ,opacity: "0.8"});
-      case '美容店'     : return L.marker(latlng, {icon: IconHairDressers,opacity: "0.8"});
+      case '理容店'     : return L.marker(latlng, {icon: IconBarbershop  ,opacity: "0.8"});
+      case '美容店'     : return L.marker(latlng, {icon: IconHairdressers,opacity: "0.8"});
       default : return L.marker(latlng, {icon: IconDefault, opacity: "0.8"});
 	  }
   },
@@ -47,17 +57,14 @@ var overlayMaps = {
 //  "多目的トイレ"   : toiletLayer,
 //  "ルート案内表示" : routeLayer,
 };
-/*
+
 if( DEFALT_DATA == "FACILITY" ) {
   map.addLayer( facilityLayer );
 }
 if( DEFALT_DATA == "PHARMACY" ) {
   map.addLayer( pharmacyLayer );
 }
-*/
-map.addLayer( facilityLayer );
-map.addLayer( pharmacyLayer );
-map.addLayer( toiletLayer );
+//map.addLayer( toiletLayer );
 
 L.control.layers( baseMaps, overlayMaps ).addTo(map);
 

@@ -22,7 +22,7 @@ TemplatePopup_Toilet = '<div class="leaflet-popup-content" style="width: 266px;"
 //差し替えパラメータ
 
 
-//  地点情報用ポップアップテンプレート（注意／警告／バス停／スタート／ゴール）
+//  地点情報用ポップアップテンプレー
 TemplatePopup_POI = '<div class="leaflet-popup-content" style="width: 266px;">'
                    + 'POI_NAME'              //  地点名称
                    + 'POI_SUMMERY'           //  地点説明（TemplateParts_Summry）
@@ -41,6 +41,7 @@ TemplatePopup_ITEMS = '<table class="popup-item">'
                     + 'POI_TEL'     　     //  電話番号
                     + 'POI_FAX'     　     //  FAX番号
                     + 'POI_LINK'     　    //  リンク
+                    + 'POI_SORT'     　    //  業種
                     + "</table>\n";     
 
 ////
@@ -73,8 +74,8 @@ TemplateItem_Price    = '<tr><th>入場費用：</th><td>POPUP_PRICE</td></tr>';
 TemplateItem_Address  = '<tr><th>所在地：</th><td>POPUP_ADDRESS</td></tr>';
 TemplateItem_FAX      = '<tr><th>ＦＡＸ：</th><td>POPUP_FAX</td></tr>';
 TemplateItem_TEL      = '<tr><th>電話番号：</th><td>POPUP_TEL</td></tr>';
-TemplateItem_FAX      = '<tr><th>ＦＡＸ：</th><td>POPUP_FAX</td></tr>';
 TemplateItem_URL      = '<tr><th>ＵＲＬ：</th><td>POPUP_LINK</td></tr>';
+TemplateItem_Sort     = '<tr><th>業種：</th><td>POPUP_SORT</td></tr>';
 
 ////
 //  TOILET_PROPATY_ICON で利用
@@ -297,6 +298,16 @@ function setPopupContentPOI(feature, layer) {
 	      popup = "";
       }
       popupBlock = popupBlock.replace("POI_LINK", popupParts );
+
+      // 業種
+     popupParts = "";
+      if ( feature.properties.業種 !== undefined ) {
+        var sort= feature.properties.業種 ; 
+	      popupParts = TemplateItem_Sort.replace( "POPUP_SORT" , sort );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_SORT", popupParts );
     }
     popupContent = popupContent.replace("POI_ITEMS", popupBlock );
 
@@ -309,8 +320,11 @@ function setPopupContentPOI(feature, layer) {
     popupContent = popupContent.replace("POI_DESCRIBE", popupParts );
 
     //  RouteSearch
-    popupParts  = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+    popupParts  = "";
+/*
+    popupParts  = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates );
     popupParts += TemplateParts_WCRouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+*/
     popupContent = popupContent.replace("POI_ROUTE_SEARCH", popupParts );
 	}
 
