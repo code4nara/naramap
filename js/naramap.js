@@ -2,7 +2,7 @@
 //  奈良マップ
 //
 switch( location.host ){
-  case 'naamap.code4nara.org' :
+  case 'naramap.code4nara.org' :
     //  本番サーバではMierune地図を利用
     var $maptile = mierune_std;
     break;
