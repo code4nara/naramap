@@ -1,5 +1,5 @@
-//  エリア別パラメータ
-//  施設情報
+//  表示種別パラメータ
+//  禁煙施設情報
 
 //  背景地図：初期表示の中心の緯度・経度
 DEF_LAT=34.6900; 
@@ -11,12 +11,14 @@ DEF_ZOOM=13;
 //  フォルト
 DEFALT_DATA = "FACILITY";
 
-//  施設
+//  多目的トイレ
 GEOJSON_TOILET   = './geojson/toilet.geojson';
 
-//  施設
+//  禁煙施設
 GEOJSON_FACILITY = './geojson/facility.geojson';
 
-//  薬局
+//  禁煙薬局
 GEOJSON_PHARMACY  = './geojson/pharmacy.geojson';
 
+//  公共施設
+GEOJSON_PUBLIC_FACILITY = './geojson/public_facility.geojson';
