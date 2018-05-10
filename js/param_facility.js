@@ -6,7 +6,10 @@ DEF_LAT=34.6900;
 DEF_LON=135.8200; 
 
 //  背景地図：初期表示のズームレベル（縮尺）
-DEF_ZOOM=12;
+DEF_ZOOM=13;
+
+//  フォルト
+DEFALT_DATA = "FACILITY";
 
 //  施設
 GEOJSON_TOILET   = './geojson/toilet.geojson';
@@ -17,4 +20,3 @@ GEOJSON_FACILITY = './geojson/facility.geojson';
 //  薬局
 GEOJSON_PHARMACY  = './geojson/pharmacy.geojson';
 
-DEFALT_DATA = "FACILITY";
