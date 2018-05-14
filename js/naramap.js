@@ -13,6 +13,15 @@ switch( location.host ){
 var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
 
 
+//  公共施設表示
+                                             
+var publicfacilityLayer = new L.GeoJSON.AJAX( GEOJSON_PUBLIC_FACILITY , {
+  pointToLayer: function (feature, latlng) {
+    return L.marker(latlng, {icon: IconDefault, opacity: "0.8"});
+  },
+  onEachFeature: onEachFeaturePublicFacility
+});
+
 //  多目的トイレ表示
 /*
 var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
@@ -54,6 +63,7 @@ var pharmacyLayer = new L.GeoJSON.AJAX( GEOJSON_PHARMACY , {
 var overlayMaps = {
   "禁煙施設"       : facilityLayer,
   "禁煙薬局"       : pharmacyLayer,
+  "公共施設"       : publicfacilityLayer,
 //  "多目的トイレ"   : toiletLayer,
 //  "ルート案内表示" : routeLayer,
 };
@@ -63,6 +73,9 @@ if( DEFALT_DATA == "FACILITY" ) {
 }
 if( DEFALT_DATA == "PHARMACY" ) {
   map.addLayer( pharmacyLayer );
+}
+if( DEFALT_DATA == "PUBLIC_FACILITY" ) {
+  map.addLayer( publicfacilityLayer );
 }
 //map.addLayer( toiletLayer );
 

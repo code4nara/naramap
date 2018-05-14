@@ -9,7 +9,7 @@ DEF_LON=135.8200;
 DEF_ZOOM=13;
 
 //  フォルト
-DEFALT_DATA = "FACILITY";
+DEFALT_DATA = "PUBLIC_FACILITY";
 
 //  多目的トイレ
 GEOJSON_TOILET   = './geojson/toilet.geojson';

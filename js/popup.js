@@ -188,6 +188,7 @@ function setPopupContentWC(feature){
 //  console.log( popupContent );
   return( popupContent );
 } 
+
 ////
 //  Popup for POI (except WC)
 function onEachFeaturePOI(feature, layer) {
@@ -303,6 +304,152 @@ function setPopupContentPOI(feature, layer) {
      popupParts = "";
       if ( feature.properties.業種 !== undefined ) {
         var sort= feature.properties.業種 ; 
+	      popupParts = TemplateItem_Sort.replace( "POPUP_SORT" , sort );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_SORT", popupParts );
+    }
+    popupContent = popupContent.replace("POI_ITEMS", popupBlock );
+
+	  //  Remarks
+	  if (( feature.properties.Remarks !== undefined )&&( feature.properties.Remarks != "" )){
+	    popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
+    }else{
+	    popupParts = "";
+    }
+    popupContent = popupContent.replace("POI_DESCRIBE", popupParts );
+
+    //  RouteSearch
+    popupParts  = "";
+/*
+    popupParts  = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates );
+    popupParts += TemplateParts_WCRouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+*/
+    popupContent = popupContent.replace("POI_ROUTE_SEARCH", popupParts );
+	}
+
+//  console.log( "kokoInfo : "+ popupContent );
+  return( popupContent );
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+////
+//  Popup for FACIRITY
+function onEachFeaturePublicFacility(feature, layer) {
+  popupContent = setPopupContentPublicFacility(feature, layer);
+//  console.log( "popupContent: "+popupContent );
+
+  layer.bindPopup(popupContent);
+}
+
+//  PopupContent for the Information 
+function setPopupContentPublicFacility(feature, layer) {
+//  console.log( "setPopupContentPOI()" );
+  var popupContent=TemplatePopup_POI ;
+  var popupParts = "" ;
+
+  //  Place Name
+  if ( feature.properties ){
+	  //  Name
+	  if (( feature.properties.施設名 !== undefined )&&( feature.properties.施設名 != "" )){
+	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.施設名 );
+    }else{
+	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
+    }
+    popupContent = popupContent.replace("POI_NAME", popupParts );
+
+	  //  Summery
+	  if (( feature.properties.主な業務施設概要 !== undefined )&&( feature.properties.主な業務施設概要 != "" )){
+	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.主な業務施設概要 );
+    }else{
+	    popupParts = "";
+    }
+    popupContent = popupContent.replace("POI_SUMMERY", popupParts );
+
+
+    //  Photo Image (1)
+	  if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+      popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
+	  }else{
+      popupParts = "";
+	  }
+    popupContent = popupContent.replace("POI_PHOTO1", popupParts );
+    //  Photo Image (2)
+	  if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
+      popupParts = TemplateParts_Photo.replace("POPUP_PHOTO", feature.properties.Photo2 );
+	  }else{
+      popupParts = "";
+    }
+    popupContent = popupContent.replace("POI_PHOTO2", popupParts );
+
+	  //  Item Table
+    popupBlock = TemplatePopup_ITEMS;
+    {
+      // Opening times
+      if ( (feature.properties.Open !== undefined ) && (feature.properties.Close !== undefined ) ){    		
+	      popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPEN" , feature.properties.Open  );
+	      popupParts = popupParts.replace( "POPUP_CLOSE" , feature.properties.Close );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_OPENINGTIME", popupParts );
+
+      // Holiday
+      if ( feature.properties.Holiday !== undefined ){
+	      popupParts = TemplateItem_Holiday.replace( "POPUP_HOLIDAY" , feature.properties.Holiday  );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_HOLIDAY", popupParts );
+
+      // Price fee
+      if ( feature.properties.Price !== undefined ) {
+	      popupParts = TemplateItem_Price.replace( "POPUP_PRICE" , feature.properties.Price );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_PRICE", popupParts );
+
+      // 住所／所在地
+      if ( feature.properties.所在地 !== undefined ) {
+	      popupParts = TemplateItem_Address.replace( "POPUP_ADDRESS" , feature.properties.所在地 );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_ADDRESS", popupParts );
+
+      // TEL
+      if (( feature.properties.電話番号 !== undefined )&&( feature.properties.電話番号 != "—" )){
+	      popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.電話番号  );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_TEL", popupParts );
+
+      // FAX
+      if (( feature.properties.FAX番号 !== undefined )&&( feature.properties.FAX番号 != "—" )){
+	      popupParts = TemplateItem_FAX.replace( "POPUP_FAX" , feature.properties.FAX番号 );
+      }else{
+	      popupParts = "";
+      }
+      popupBlock = popupBlock.replace("POI_FAX", popupParts );
+
+      // LINK
+      if (( feature.properties.URL !== undefined )&&( feature.properties.URL != "—" )){
+	      popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
+	      popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
+	      popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts  );
+      }else{
+	      popup = "";
+      }
+      popupBlock = popupBlock.replace("POI_LINK", popupParts );
+
+      // 業種
+     popupParts = "";
+      if ( feature.properties.分類 !== undefined ) {
+        var sort= feature.properties.分類 ; 
 	      popupParts = TemplateItem_Sort.replace( "POPUP_SORT" , sort );
       }else{
 	      popupParts = "";
